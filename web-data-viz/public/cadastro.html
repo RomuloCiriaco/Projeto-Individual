@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/Cadastro.css">
+    <script src="./js/Cadastro_script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./index.html" class="logo-link"><img src="./assets/imgs/logo_Billy.png" class="logo-img"></a>
+                <a href="./index.html" class="logo-link"><span class="escrito">MangaQ<br>Comics</span></a>
+            </div>
+            <ul class="navbar-links">
+            </ul>
+            <div class="profile">
+                <a href="./Login.html" class="profile-link"><img src="./assets/imgs/Profile_Calvin.png" class="profile-img"></a>
+                <a href="./Login.html" class="profile-link"><span class="escrito">Login</span></a>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <div class="card">
+            <h1>Cadastro</h1>
+            <div class="main">
+                <div>
+
+
+                    <div class="input-box">
+                        <input id="nome_input" type="text" placeholder="Nome" />
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-box">
+                        <input id="Telefone_input" type="text" placeholder="Telefone" />
+                        <i class='bx bxs-phone'></i>
+                    </div>
+                    <div class="input-box">
+                        <input oninput="verificar_email()" id="email_input" type="text" placeholder="Email" />
+                        <i class='bx bxs-envelope'></i>
+                        <span id="span_email" style="color: #CC0000; display: none;">o email tem que possuir "@" e ".com"</span>
+                    </div>
+                    <div class="input-box">
+                        <input oninput="verificar_requisitos()" id="senha_input" type="password" placeholder="Senha" />
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                    <div class="input-box">
+                        <input oninput="verificar_senha()" id="confirmacao_senha_input" type="password"
+                            placeholder="Confirmar senha" />
+                        <i class='bx bxs-lock-alt'></i>
+                        <span id="span_senha" style="color: #CC0000; display: none;">As senhas não coincidem</span>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="senha-requisitos">
+                <span id="req_char"><i class='bx bxs-dislike'></i>8 caracteres</span>
+                <span id="req_mai"><i class='bx bxs-dislike'></i>Letras maiúsuclas</span>
+                <span id="req_min"><i class='bx bxs-dislike'></i>Letras minúsculas</span>
+                <span id="req_esp"><i class='bx bxs-dislike'></i>Caractere especial</span>
+            </div>
+            <button class="btn" onclick="cadastrar()">Cadastrar</button>
+        </div>
+    </div>
+  
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-left">
+                Navegue pelo site:
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="">Serviços</a></li>
+                    <li><a href="">Sobre Nós</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-right">
+                Entre em contato:
+                <ul>
+                    <li><img src="./assets/imgs/instagram.png">@Ciriaco_fly</li>
+                    <li><img src="./assets/imgs/whatsapp.png" alt=""> (11)99999-9999</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <img src="./assets/imgs/logo_Billy.png" alt="">
+            <span class="footer-rights">MangaQ Comics © - 2024</span>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
