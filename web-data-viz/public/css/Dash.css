@@ -90,7 +90,7 @@
     justify-content: center;
     width: 100%;
     height: fit-content;
-    background-image: url('../imgs/background.png');
+    background-image: url('../assets/imgs/background.png');
     background-repeat: no-repeat;
     background-size: cover;
 }

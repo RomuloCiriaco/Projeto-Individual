@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./Dash.css">
+    <link rel="stylesheet" href="./css/Dash.css">
     
     <title>Document</title>
 </head>
@@ -16,16 +16,15 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="../Home/Home.html" class="logo-link"><img src="../imgs/logo_Billy.png" class="logo-img"></a>
-                <a href="../Home/Home.html" class="logo-link"><span class="escrito">MangaQ<br>Comics</span></a>
+                <a href="./index.html" class="logo-link"><img src="./assets/imgs/logo_Billy.png" class="logo-img"></a>
+                <a href="./index.html" class="logo-link"><span class="escrito">MangaQ<br>Comics</span></a>
             </div>
             <ul class="navbar-links">
-                <li><a href="">Leitura</a></li>
-                <li><a href="">Recomendações e bate papo</a></li>
+                <li><a href="">Quiz</a></li>
             </ul>
             <div class="profile">
-                <a href="" class="profile-link"><img src="../imgs/Profile_Calvin.png" class="profile-img"></a>
-                <a href="" class="profile-link"><span class="escrito">Perfil</span></a>
+                <a href="./Dash.html" class="profile-link"><img src="./assets/imgs/Profile_Calvin.png" class="profile-img"></a>
+                <a href="./Dash.html" class="profile-link"><span class="escrito">Leitura</span></a>
             </div>
         </nav>
     </header>
@@ -69,15 +68,15 @@
             <div class="footer-right">
                 Entre em contato:
                 <ul>
-                    <li><img src="../imgs/instagram.png">@Ciriaco_fly</li>
-                    <li><img src="../imgs/linkedin.png" alt="">RomuloCiriaco</li>
-                    <li><img src="../imgs/whatsapp.png" alt=""> (11)99999-9999</li>
+                    <li><img src="./assets/imgs/instagram.png">@Ciriaco_fly</li>
+                    <li><img src="./assets/imgs/linkedin.png" alt="">RomuloCiriaco</li>
+                    <li><img src="./assets/imgs/whatsapp.png" alt=""> (11)99999-9999</li>
                 </ul>
             </div>
         </div>
         <hr>
         <div class="footer-bottom">
-            <img src="../imgs/logo_Billy.png" alt="">
+            <img src="./assets/imgs/logo_Billy.png" alt="">
             <span class="footer-rights">MangaQ Comics © - 2024</span>
         </div>
     </footer>
@@ -106,10 +105,10 @@ document.getElementById('updateCharts').addEventListener('click', function() {
     const readingTimeChart = new Chart(ctx1, {
         type: 'line',
         data: {
-            labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'], // Dias da semana
+            labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5', 'Semana 6', 'Semana 7'], // Dias da semana
             datasets: [{
                 label: 'Tempo de Leitura (minutos)',
-                data: [30, 45, 20, 60, 90, 120, 15], // Exemplo de dados
+                data: [0, 0, 0, 0, 0, 0, 0], // Exemplo de dados
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderWidth: 2,
@@ -131,10 +130,10 @@ document.getElementById('updateCharts').addEventListener('click', function() {
     const mangaCountChart = new Chart(ctx2, {
         type: 'bar',
         data: {
-            labels: ['Mangás', 'HQs', 'Quadrinhos'], // Categorias
+            labels: ['Novembro', 'Dezembro', 'Janeiro'], // Categorias
             datasets: [{
                 label: 'Quantidade',
-                data: [12, 19, 7], // Exemplo de dados
+                data: [0, 0, 0], // Exemplo de dados
                 backgroundColor: [
                     'rgba(54, 162, 235, 0.2)',
                     'rgba(255, 206, 86, 0.2)',
