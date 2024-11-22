@@ -42,7 +42,7 @@
   
   margin: 0px 0px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   gap: 10px;
 }
@@ -98,7 +98,7 @@
 }
 
 .header .navbar .profile-link .profile-img {
-  width: 75px;
+  width: 70px;
 }
 
 
