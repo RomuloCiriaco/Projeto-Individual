@@ -14,33 +14,42 @@
 <body>
 
     <header class="header">
+
         <nav class="navbar">
+
+
             <div class="logo">
-                <a href="./index.html" class="logo-link"><img src="./assets/imgs/logo_Billy.png" class="logo-img"></a>
-                <a href="./index.html" class="logo-link"><span class="escrito">MangaQ<br>Comics</span></a>
+                <a href="./home.html" class="logo-link"><span class="escrito">Comics</span></a>
+                <a href="./home.html" class="logo-link"><img src="./assets/imgs/logo_Billy.png" class="logo-img"></a>
+                <a href="./home.html" class="logo-link"><span class="escrito">MangaQ</span></a>
             </div>
-            <ul class="navbar-links">
-                <li><a href="">Quiz</a></li>
-            </ul>
-            <div class="profile">
-                <a href="./Dash.html" class="profile-link"><img src="./assets/imgs/Profile_Calvin.png" class="profile-img"></a>
-                <a href="./Dash.html" class="profile-link"><span class="escrito">Leitura</span></a>
-            </div>
+
+
         </nav>
+
     </header>
+
 
 
     <div class="container">
         <div class="input-container">
+            
+            <h2>Quanto tempo você leu essa semana?</h2>
           
             <input type="number" id="readingTime" placeholder="Insira o tempo de leitura">
             
+            <button class="btn" id="updateleitura">Atualizar Gráfico de leitura</button> 
+            
+        </div>
+        <div class="input-container">
+
+            <h2>Qunatos livros você leu nesse més?</h2>
             
             <input type="number" id="mangaCount" placeholder="Insira a quantidade">
             
-            <button class="btn" id="updateCharts">Atualizar Gráficos</button>
+            <button class="btn" id="updateCharts">Atualizar Gráfico do livros</button>
+            
         </div>
-    
         <div class="graficos">
             <div class="grafico-linha">
                 <h2>Tempo de Leitura por Dia</h2>
@@ -84,16 +93,28 @@
 <script>
 
 document.getElementById('updateCharts').addEventListener('click', function() {
-    const readingTime = document.getElementById('readingTime').value;
+    
     const mangaCount = document.getElementById('mangaCount').value;
 
     // Atualizar os dados dos gráficos
-    readingTimeChart.data.datasets[0].data.push(readingTime);
+   
     mangaCountChart.data.datasets[0].data.push(mangaCount);
 
     // Atualizar os gráficos
-    readingTimeChart.update();
+   
     mangaCountChart.update();
+});
+document.getElementById('updateleitura').addEventListener('click', function() {
+    const readingTime = document.getElementById('readingTime').value;
+   
+
+    // Atualizar os dados dos gráficos
+    readingTimeChart.data.datasets[0].data.push(readingTime);
+    
+
+    // Atualizar os gráficos
+    readingTimeChart.update();
+    
 });
 
     // Gráfico de Tempo de Leitura
@@ -104,7 +125,7 @@ document.getElementById('updateCharts').addEventListener('click', function() {
             labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5', 'Semana 6', 'Semana 7'], // Dias da semana
             datasets: [{
                 label: 'Tempo de Leitura (minutos)',
-                data: [0, 0, 0, 0, 0, 0, 0], // Exemplo de dados
+                data: [], // Exemplo de dados
                 borderColor: 'rgba(255, 99, 132, 1)',
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderWidth: 2,
@@ -129,7 +150,7 @@ document.getElementById('updateCharts').addEventListener('click', function() {
             labels: ['Novembro', 'Dezembro', 'Janeiro'], // Categorias
             datasets: [{
                 label: 'Quantidade',
-                data: [0, 0, 0], // Exemplo de dados
+                data: [], // Exemplo de dados
                 backgroundColor: [
                     'rgba(54, 162, 235, 0.2)',
                     'rgba(255, 206, 86, 0.2)',

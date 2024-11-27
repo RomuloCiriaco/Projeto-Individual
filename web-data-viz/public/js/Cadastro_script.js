@@ -39,7 +39,7 @@ function verificar_email() {
     req_mai.innerHTML = `<i class='bx bxs-dislike'></i>Letras maiúsculas`
   }
 
-  if (senha.includes('@') || senha.includes('#') || senha.includes('$') || senha.includes('%') || senha.includes('&') || senha.includes('_')) {
+  if (senha.includes('@') || senha.includes('#') || senha.includes('$') || senha.includes('%') || senha.includes('&') || senha.includes('_') || senha.includes('!')) {
     req_esp.style.color = '#228B22'
     req_esp.innerHTML = `<i class='bx bxs-like'></i>Caractere especial`
   } else {
@@ -84,7 +84,7 @@ function cadastrar() {
     return
   }
 
-  fetch('http://localhost:3333/usuarios/cadastrar', {
+  fetch('http://localhost:8080/usuarios/cadastrar', {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
